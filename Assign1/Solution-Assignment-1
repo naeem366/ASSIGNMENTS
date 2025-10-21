@@ -1,2 +1,194 @@
+1. What are Keywords in JavaScript?
 Keywords are special words that have specific meanings in JavaScript.They are part of the language syntax and cannot be used as variable names, function names, or identifiers.
 Examples:let, var, const, if, else, for, while, return, break, continue, switch, case, default, try, catch, finally, class, function, typeof, delete, new, import, export.
+
+2. What are Reserved Keywords in javascript?
+Reserved keywords are words set aside by JavaScript for future use or special purposes.Even if they don’t currently perform a task, you still can’t use them as variable names.
+Examples:enum, implements, package, protected, interface, private, public, static, yield, await, super.
+
+3. Using let, var, and const
+
+| Keyword | Scope           | Re-declaration | Re-assignment | Typical Use               |
+| ------- | --------------- | -------------- | ------------- | ------------------------- |
+| `var`   | Function-scoped | ✅ Yes          | ✅ Yes         | Older code or global vars |
+| `let`   | Block-scoped    | ❌ No           | ✅ Yes         | Variables that may change |
+| `const` | Block-scoped    | ❌ No           | ❌ No          | Constants or fixed values |
+
+// var example
+var name = "Naheem";
+var name = "Mujaheed"; // allowed
+console.log(name); // Mujaheed
+
+// let example
+let age = 25;
+// let age = 30; ❌ not allowed
+age = 30; // ✅ reassignment allowed
+console.log(age);
+
+// const example
+const country = "Nigeria";
+// country = "Ghana"; ❌ cannot reassign
+console.log(country);
+
+4. Meaning of Variable Terms.
+
+| Term                 | Explanation                                                   | Example              |
+| -------------------  | -------------------------------------------------------       | ---------------------|1 Variable             | A container for storing data values.                          | let name = "Naheem"; |
+2 Variable Declaration | Creating a variable name (may or may not assign a value yet). | let name;            |
+3 Variable Assignment  | Giving a declared variable a value.                           | name = "Naheem";     |
+
+5. Creating Files or Variables and Naming Conventions.
+
+Common naming conventions in JavaScript:
+1.CamelCase → userName (used for variables and functions)
+2.Snake_case → user_name
+3.PascalCase → UserName (used for classes)
+4.UPPER_CASE → PI_VALUE (used for constants)
+Example:
+let studentName = "Naheem";   // camelCase
+const PI_VALUE = 3.14159;     // UPPER_CASE
+let user_age = 20;            // snake_case
+class StudentInfo {}          // PascalCase
+
+6. JavaScript Data Types
+Two Main Categories:
+(A) Primitive Data Types
+
+1.String
+2.Number
+3.Boolean
+4.Undefined
+5.Null
+6.Symbol
+7.BigInt
+
+(B) Non-Primitive Data Type
+
+Object (includes arrays and functions)
+
+7. Primitive Data Type Examples
+Example Code:
+// Using alert interaction (Browser)
+alert("I am Naheem");
+alert('Here is Mujaheed');
+alert("Is Nabeelah Home");
+alert(true);
+alert(false);
+alert(["I love Python"]);
+alert(10000);
+alert(Symbol("Naheem"));
+alert(5 / 0);
+alert(Math.sqrt(-1));
+alert(0 ** 0);
+alert(Math.tan(Math.PI / 2));
+alert(9007199254740993n);
+
+// Using console (Browser or Terminal)
+console.log("I am Naheem");
+console.log('Here is Mujaheed');
+console.log("Is Nabeelah Home");
+console.log(true);
+console.log(false);
+console.log(["I love Python"]);
+console.log(10000);
+console.log(Symbol("Naheem"));
+console.log(5 / 0);               // Infinity
+console.log(Math.sqrt(-1));       // NaN
+console.log(0 ** 0);              // 1
+console.log(Math.tan(Math.PI/2)); // Very large number
+console.log(9007199254740993n);   // BigInt
+
+8. “naheem” Example
+let naheem;           // undefined (no value assigned)
+console.log(naheem);  // Output: undefined
+
+let naheem = null;    
+console.log(naheem);  // Output: null
+
+9. Handling the Big Paragraph and (a)
+
+We’ll save it in four different variables using naming conventions.
+
+const loremText = "Lorem ipsum ... (long text)";     // camelCase
+const LOREM_TEXT = "Lorem ipsum ... (long text)";    // UPPER_CASE
+let lorem_text = "Lorem ipsum ... (long text)";      // snake_case
+var LoremText = "Lorem ipsum ... (long text)";       // PascalCase
+
+
+Now, wherever there’s (a), perform the following replacements:
+
+let modifiedText = loremText
+  .replaceAll("(a)", "\n")        // new line
+  .replaceAll("(a)", "\t")        // tab
+  .replaceAll("(a)", "\\")        // backslash
+  .replaceAll("(a)", "\'")        // single quote
+  .replaceAll("(a)", "\"")        // double quote
+  .replaceAll("(a)", ":")         // colon mark
+  .replaceAll("(a)", "//");       // double slash
+
+
+(In real usage, you’d pick one replacement per requirement.)
+
+10. How to Identify a String Data Type
+
+You can use:
+
+typeof variable === "string"
+
+Example:
+let name = "Naheem";
+console.log(typeof name === "string"); // true
+
+11. String Manipulation Task
+
+Given:
+
+let bio = "Mummy Naheem is a trader. She is a very nice, brilliant, intelligent woman. She runs her business with honesty and dedication. Every morning, she opens her shop early and greets her customers with a warm smile. Her ability to manage finances and stock is admirable. Children love her because she always shares kind words and sometimes sweets. Her community respects her deeply. Mummy Naheem believes in hard work and fairness, and she inspires many young women to become successful entrepreneurs like her";
+
+i. Save the String:
+Already done above.
+
+ii. Find Length:
+console.log(bio.length);
+
+iii. Convert to Uppercase:
+console.log(bio.toUpperCase());
+
+iv. Convert to Lowercase:
+console.log(bio.toLowerCase());
+
+v. Find Character at Index:
+console.log(bio[50]);   // index 50
+console.log(bio[5]);    // index 5
+console.log(bio.at(-50)); // index -50 (from end)
+
+vi. Trim (remove spaces):
+console.log(bio.trim());
+
+vii. Substring / Slice Examples:
+console.log(bio.substring(0, 13)); // "Mummy Naheem"
+console.log(bio.substring(0, 13).toUpperCase()); // "MUMMY NAHEEM"
+console.log(bio.substring(0, 6) + bio.substring(7, 13).toUpperCase()); // "MUMMYNAHEEM"
+console.log(bio.slice(189, 247)); // "Her ability to manage finances and stock is admirable"
+console.log(bio.slice(bio.indexOf("she inspires"), bio.length)); 
+console.log(bio.slice(bio.indexOf("Children"), bio.indexOf("Her community")));
+
+viii. Use indexOf, lastIndexOf, charAt, charCodeAt:
+console.log(bio.indexOf("Mummy"));
+console.log(bio.lastIndexOf("her"));
+console.log(bio.charAt(10));
+console.log(bio.charCodeAt(10)); // Unicode value
+
+ix. Replace Mummy → Daddy, She → He, etc.:
+let newBio = bio
+  .replaceAll("Mummy", "Daddy")
+  .replaceAll("She", "He")
+  .replaceAll("she", "he")
+  .replaceAll("Her", "His")
+  .replaceAll("her", "his");
+
+// Browser alert
+alert(newBio);
+
+// Console output
+console.log(newBio);
