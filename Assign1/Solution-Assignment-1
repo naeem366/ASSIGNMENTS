@@ -1,0 +1,2 @@
+Keywords are special words that have specific meanings in JavaScript.They are part of the language syntax and cannot be used as variable names, function names, or identifiers.
+Examples:let, var, const, if, else, for, while, return, break, continue, switch, case, default, try, catch, finally, class, function, typeof, delete, new, import, export.
